@@ -144,12 +144,36 @@
       <span class="section-eyebrow">Gallery</span>
       <h2 class="section-title">Camp in Action</h2>
     </div>
-    <!-- TODO: Replace with camp action photos -->
-    <div class="gallery-grid stagger">
-      <div class="photo-placeholder">Camp photo</div>
-      <div class="photo-placeholder">Camp photo</div>
-      <div class="photo-placeholder">Camp photo</div>
-      <div class="photo-placeholder">Camp photo</div>
+    <div class="gallery-slider fade-up">
+      <div class="gallery-track" id="camp-gallery-track">
+        <div class="gallery-slide"><img src="camp1.jpeg" alt="Camp photo 1" loading="lazy"></div>
+        <div class="gallery-slide"><img src="camp2.jpeg" alt="Camp photo 2" loading="lazy"></div>
+        <div class="gallery-slide"><img src="working3.jpeg" alt="Camp photo 3" loading="lazy"></div>
+        <div class="gallery-slide"><img src="working4.jpeg" alt="Camp photo 4" loading="lazy"></div>
+      </div>
+      <button class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo" data-gallery-prev>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="gallery-arrow gallery-arrow-next" aria-label="Next photo" data-gallery-next>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="gallery-dots" data-gallery-dots></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section>
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-eyebrow">Video</span>
+      <h2 class="section-title">Watch Camp Highlights</h2>
+    </div>
+    <div class="video-frame fade-up">
+      <video controls preload="metadata">
+        <source src="campvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
@@ -159,7 +183,7 @@
   <div class="container">
     <div class="cta-banner fade-up">
       <h2>Register Your Athlete</h2>
-      <p>Give your young athlete a safe, structured place to grow — on and off the field.</p>
+      <p>Give your young athlete a safe, structured place to grow.</p>
       <a href="contact.html" class="btn btn-primary">Register Your Athlete</a>
       <p class="limited-note">Spots are limited</p>
     </div>

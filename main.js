@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollAnimations();
   initFaq();
   initContactForm();
+  initGallerySliders();
 });
 
 // ---- Sticky navbar shadow + mobile drawer ----
@@ -87,6 +88,46 @@ function initFaq() {
         answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });
+  });
+}
+
+// ---- Gallery slider (arrow navigation) ----
+function initGallerySliders() {
+  document.querySelectorAll('.gallery-slider').forEach(function (slider) {
+    var track = slider.querySelector('.gallery-track');
+    var slides = slider.querySelectorAll('.gallery-slide');
+    var prevBtn = slider.querySelector('[data-gallery-prev]');
+    var nextBtn = slider.querySelector('[data-gallery-next]');
+    var dotsContainer = slider.querySelector('[data-gallery-dots]');
+    if (!track || !slides.length) return;
+
+    var index = 0;
+
+    var dots = slides.length > 1 ? Array.from(slides).map(function (_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'gallery-dot';
+      dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); });
+      dotsContainer.appendChild(dot);
+      return dot;
+    }) : [];
+
+    function render() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === index);
+      });
+    }
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      render();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1); });
+
+    render();
   });
 }
 
