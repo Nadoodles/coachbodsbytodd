@@ -10,18 +10,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="organic.css">
+<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="organic.css?v=2">
 </head>
 <body class="organic">
 
 <nav class="navbar">
   <div class="nav-container">
-    <a href="index.html" class="nav-logo">BODS <span>BY TODD</span></a>
+    <a href="index.html" class="nav-logo"><span>Bods</span>By<span>Todd</span></a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="training.html" class="nav-link active">Training</a></li>
-      <li><a href="camp.html" class="nav-link">Football Camp</a></li>
+      <li><a href="camp.html" class="nav-link">Youth Football Academy</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -37,7 +37,7 @@
 <div class="mobile-drawer">
   <a href="index.html" class="nav-link">Home</a>
   <a href="training.html" class="nav-link active">Training</a>
-  <a href="camp.html" class="nav-link">Football Camp</a>
+  <a href="camp.html" class="nav-link">Youth Football Academy</a>
   <a href="about.html" class="nav-link">About</a>
   <a href="testimonials.html" class="nav-link">Reviews</a>
   <a href="contact.html" class="nav-link">Contact</a>
@@ -62,7 +62,7 @@
       <p class="mt-2" style="font-size:17px;">Whether you're a parent trying to find time for yourself, a busy professional in Los Angeles, or someone who simply wants to get fit with a real coach in their corner. Coach Todd builds a program around your schedule, your goals, and your starting point. No guesswork, no judgment, just steady progress.</p>
     </div>
     <div class="fade-up split-photo">
-      <img src="working2.jpeg" alt="Coach Todd leading a training session">
+      <img src="team.jpeg" alt="Coach Todd leading a training session">
     </div>
   </div>
 </section>
@@ -72,13 +72,44 @@
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-eyebrow">See It In Action</span>
-      <h2 class="section-title">Watch a Real Training Session</h2>
+      <h2 class="section-title">Watch Real Training Sessions</h2>
     </div>
-    <div class="video-frame fade-up">
-      <video controls preload="metadata">
-        <source src="trainingvideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <!-- 4 training videos. trainingvideo.mp4 already exists — save the other three
+         with these exact names in the project root and they'll appear automatically. -->
+    <div class="gallery-slider fade-up">
+      <div class="gallery-track">
+        <div class="gallery-slide">
+          <video controls preload="metadata">
+            <source src="assets/training4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gallery-slide">
+          <video controls preload="metadata">
+            <source src="assets/training2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gallery-slide">
+          <video controls preload="metadata">
+            <source src="assets/training3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gallery-slide">
+          <video controls preload="metadata">
+            <source src="assets/training1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <button class="gallery-arrow gallery-arrow-prev" aria-label="Previous video" data-gallery-prev>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="gallery-arrow gallery-arrow-next" aria-label="Next video" data-gallery-next>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="gallery-dots" data-gallery-dots></div>
     </div>
   </div>
 </section>
@@ -92,10 +123,10 @@
     </div>
     <ul class="check-list grid-2 stagger" style="max-width:800px; margin:0 auto;">
       <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> One-on-one training sessions</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Private football training for athletes</li>
       <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Group training</li>
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Nutrition guidance</li>
       <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Custom workout plans</li>
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Virtual sessions available</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Virtual (Zoom) sessions available</li>
     </ul>
   </div>
 </section>
@@ -110,17 +141,16 @@
     <div class="fade-up" style="max-width:700px; margin:0 auto;">
       <table class="rate-table">
         <thead>
-          <tr><th>Package</th><th>Rate</th></tr>
+          <tr><th>Service</th><th>Rate</th></tr>
         </thead>
         <tbody>
-          <!-- TODO: Add current rates and package options -->
-          <tr><td>Single Session</td><td>[RATE] per session</td></tr>
-          <tr><td>4-Session Package</td><td>[RATE] per session</td></tr>
-          <tr><td>8-Session Package</td><td>[RATE] per session</td></tr>
-          <tr><td>Group Training</td><td>[RATE] per person</td></tr>
+          <tr><td>Fitness Training (In-Person)</td><td>$100 per session</td></tr>
+          <tr><td>Private Football Training</td><td>$125 per session</td></tr>
+          <tr><td>Zoom Fitness Training</td><td>$85 per session</td></tr>
+          <tr><td>Multi-Session Packages</td><td>Rates vary &mdash; contact for details</td></tr>
         </tbody>
       </table>
-      <p class="rate-note text-center">Contact Todd for current pricing and package options.</p>
+      <p class="rate-note text-center">Package rates vary — contact Todd directly for current package pricing.</p>
     </div>
   </div>
 </section>
@@ -151,7 +181,7 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <a href="training.html">Personal Training</a>
-        <a href="camp.html">Football Camp</a>
+        <a href="camp.html">Youth Football Academy</a>
         <a href="about.html">About Coach Todd</a>
         <a href="testimonials.html">Reviews</a>
       </div>
@@ -166,6 +196,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js?v=2"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initFaq();
   initContactForm();
   initGallerySliders();
+  initCopyButtons();
 });
 
 // ---- Sticky navbar shadow + mobile drawer ----
@@ -119,7 +120,14 @@ function initGallerySliders() {
       });
     }
 
+    function pauseAllVideos() {
+      slider.querySelectorAll('video').forEach(function (video) {
+        if (!video.paused) video.pause();
+      });
+    }
+
     function goTo(i) {
+      pauseAllVideos();
       index = (i + slides.length) % slides.length;
       render();
     }
@@ -131,22 +139,38 @@ function initGallerySliders() {
   });
 }
 
-// ---- Contact form via EmailJS ----
-// TODO: Replace with Todd's actual EmailJS public key, service ID, and template ID
-var EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-var EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-var EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+// ---- Copy-to-clipboard fallback (for mailto links that may not open) ----
+function initCopyButtons() {
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    var originalText = btn.textContent;
+
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+
+      var showCopied = function () {
+        btn.textContent = 'Copied! Paste it into your email app.';
+        setTimeout(function () { btn.textContent = originalText; }, 2500);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showCopied).catch(function () {
+          window.prompt('Copy this email address:', text);
+        });
+      } else {
+        window.prompt('Copy this email address:', text);
+      }
+    });
+  });
+}
+
+// ---- Contact form: opens the visitor's own email app, pre-filled ----
+var TODD_EMAIL = 'ttodd337@hotmail.com';
 
 function initContactForm() {
   var form = document.getElementById('contact-form');
   if (!form) return;
 
-  if (window.emailjs && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
-  }
-
   var statusEl = document.getElementById('form-status');
-  var submitBtn = form.querySelector('button[type="submit"]');
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -156,30 +180,27 @@ function initContactForm() {
       return;
     }
 
-    var originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var phone = form.phone.value.trim();
+    var interest = form.interest.value;
+    var message = form.message.value.trim();
 
-    var showStatus = function (message, isSuccess) {
-      statusEl.textContent = message;
-      statusEl.className = 'form-status ' + (isSuccess ? 'success' : 'error');
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    };
+    var subject = 'Website Inquiry from ' + name;
+    var body = [
+      'Name: ' + name,
+      'Email: ' + email,
+      'Phone: ' + (phone || 'Not provided'),
+      'Interested in: ' + interest,
+      '',
+      'Message:',
+      message || '(No message provided)'
+    ].join('\n');
 
-    if (!window.emailjs || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-      // EmailJS not yet configured — surface a clear message instead of failing silently
-      showStatus('Form is not fully configured yet. Please call or email Coach Todd directly.', false);
-      return;
-    }
+    var mailtoLink = 'mailto:' + TODD_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = mailtoLink;
 
-    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
-      .then(function () {
-        showStatus("Thanks! Your message has been sent — Coach Todd will get back to you soon.", true);
-        form.reset();
-      })
-      .catch(function () {
-        showStatus('Something went wrong sending your message. Please try again or call directly.', false);
-      });
+    statusEl.textContent = 'Your email app should now open with your message ready to send — just hit send there. If nothing opens, email Todd directly at ' + TODD_EMAIL + '.';
+    statusEl.className = 'form-status success';
   });
 }

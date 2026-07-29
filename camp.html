@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Youth Football Camp Los Angeles | Bods by Todd</title>
-<meta name="description" content="A safe, structured, and fun youth football camp in Los Angeles. Coach Todd builds skills, confidence, and character on and off the field. Spots are limited.">
+<title>Youth Football Academy Los Angeles | Bods by Todd</title>
+<meta name="description" content="Coach Todd's Youth Football Academy — Saturday, August 17, 2026 in Los Angeles. A safe, structured, and fun program building skills, confidence, and character. Spots are limited — register today.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="organic.css">
+<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="organic.css?v=2">
 </head>
 <body class="organic">
 
 <nav class="navbar">
   <div class="nav-container">
-    <a href="index.html" class="nav-logo">BODS <span>BY TODD</span></a>
+    <a href="index.html" class="nav-logo"><span>Bods</span>By<span>Todd</span></a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="training.html" class="nav-link">Training</a></li>
-      <li><a href="camp.html" class="nav-link active">Football Camp</a></li>
+      <li><a href="camp.html" class="nav-link active">Youth Football Academy</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -37,7 +37,7 @@
 <div class="mobile-drawer">
   <a href="index.html" class="nav-link">Home</a>
   <a href="training.html" class="nav-link">Training</a>
-  <a href="camp.html" class="nav-link active">Football Camp</a>
+  <a href="camp.html" class="nav-link active">Youth Football Academy</a>
   <a href="about.html" class="nav-link">About</a>
   <a href="testimonials.html" class="nav-link">Reviews</a>
   <a href="contact.html" class="nav-link">Contact</a>
@@ -47,9 +47,9 @@
 <!-- ============ PAGE HERO ============ -->
 <header class="page-hero">
   <div class="container">
-    <h1>Youth Football Camp</h1>
-    <p>Building athletes. Building character.</p>
-    <a href="contact.html" class="btn btn-primary">Register Your Athlete</a>
+    <h1>Youth Football Academy</h1>
+    <h2 style="color: white; font-family: inherit;">A day of football, confidence, and character-building for athletes ages 6–13. Through fun drills, teamwork, and positive coaching, every player leaves a little stronger than they arrived.</h2>
+    <a href="#register" class="btn btn-primary">Register Your Athlete</a>
   </div>
 </header>
 
@@ -63,18 +63,17 @@
     <div class="grid-4 stagger">
       <div class="card">
         <h3 style="font-size:16px;">Who It's For</h3>
-        <!-- TODO: Confirm exact age range -->
-        <p>[AGE RANGE] year old athletes</p>
+        <p>Ages 6&ndash;13</p>
       </div>
       <div class="card">
         <h3 style="font-size:16px;">Location</h3>
-        <!-- TODO: Add exact camp location -->
-        <p>[LOCATION], Los Angeles, CA</p>
+        <p>Pacific Palisades, Los Angeles, CA</p>
+        <!-- TODO: Add exact venue/street address -->
       </div>
       <div class="card">
-        <h3 style="font-size:16px;">Schedule</h3>
-        <!-- TODO: Add camp days and times -->
-        <p>[DAYS AND TIMES]</p>
+        <h3 style="font-size:16px;">Date</h3>
+        <p>August 17, 2026 - <br>September 3, 2026</p>
+        <!-- TODO: Add exact start/end time -->
       </div>
       <div class="card">
         <h3 style="font-size:16px;">Cost</h3>
@@ -146,23 +145,37 @@
       <span class="section-eyebrow">Gallery</span>
       <h2 class="section-title">Camp in Action</h2>
     </div>
+    <!-- 13 Academy photos. Save each file with these exact names in the project
+         root and it will appear automatically — no other code changes needed. -->
     <div class="gallery-slider fade-up">
-      <div class="gallery-track" id="camp-gallery-track">
-        <div class="gallery-slide"><img src="camp1.jpeg" alt="Camp photo 1" loading="lazy"></div>
-        <div class="gallery-slide"><img src="camp2.jpeg" alt="Camp photo 2" loading="lazy"></div>
-        <div class="gallery-slide"><img src="working3.jpeg" alt="Camp photo 3" loading="lazy"></div>
-        <div class="gallery-slide"><img src="working4.jpeg" alt="Camp photo 4" loading="lazy"></div>
-      </div>
-      <button class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo" data-gallery-prev>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="gallery-arrow gallery-arrow-next" aria-label="Next photo" data-gallery-next>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="gallery-dots" data-gallery-dots></div>
-    </div>
+  <div class="gallery-track" id="camp-gallery-track">
+    <div class="gallery-slide"><img src="assets/winners.jpeg" alt="Youth Football Academy photo 1" loading="lazy"></div>
+    <div class="gallery-slide"><img src="assets/grouphuddle.jpeg" alt="Youth Football Academy photo 2" loading="lazy"></div>
+    <div class="gallery-slide"><img src="assets/grouphuddle2.jpeg" alt="Youth Football Academy photo 3" loading="lazy"></div>
+    <div class="gallery-slide"><img src="assets/teamphoto2.jpeg" alt="Youth Football Academy photo 4" loading="lazy"></div>
+    <div class="gallery-slide"><img src="assets/youthcamp.jpeg" alt="Youth Football Academy photo 5" loading="lazy"></div>
+    <div class="gallery-slide"><img src="assets/youthcamp2.jpeg" alt="Youth Football Academy photo 6" loading="lazy"></div>
+    <div class="gallery-slide"><img src="assets/toddtalkingtokids.jpeg" alt="Youth Football Academy photo 7" loading="lazy"></div>
+    <div class="gallery-slide"><img src="teamphoto1.jpeg" alt="Youth Football Academy photo 8" loading="lazy"></div>
+    <div class="gallery-slide"><img src="camp1.jpeg" alt="Youth Football Academy photo 9" loading="lazy"></div>
+    <div class="gallery-slide"><img src="camp2.jpeg" alt="Youth Football Academy photo 10" loading="lazy"></div>
+    <div class="gallery-slide"><img src="working4.jpeg" alt="Youth Football Academy photo 11" loading="lazy"></div>
   </div>
-</section>
+
+  <button class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo" data-gallery-prev>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <button class="gallery-arrow gallery-arrow-next" aria-label="Next photo" data-gallery-next>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="gallery-dots" data-gallery-dots></div>
+</div>
 
 <!-- ============ VIDEO ============ -->
 <section>
@@ -180,13 +193,45 @@
   </div>
 </section>
 
+<!-- ============ REGISTER ============ -->
+<section id="register" class="bg-surface">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-eyebrow">Registration</span>
+      <h2 class="section-title">Register for the Youth Football Academy</h2>
+      <p class="section-subtitle">Saturday, August 17, 2026 in Los Angeles, CA. Spots are limited — register early.</p>
+    </div>
+    <div class="register-steps stagger">
+      <div class="register-step">
+        <div class="step-number">1</div>
+        <h3>Download the Form</h3>
+        <p>Get the official registration form and waiver for the Academy.</p>
+        <a href="youth-football-academy-registration.docx" download class="btn-pill btn-pill-terracotta">Download Registration Form</a>
+      </div>
+      <div class="register-step">
+        <div class="step-number">2</div>
+        <h3>Fill It Out &amp; Sign</h3>
+        <p>Complete the player and parent information, then sign the waiver and release.</p>
+      </div>
+      <div class="register-step">
+        <div class="step-number">3</div>
+        <h3>Email It to Todd</h3>
+        <p>Attach your completed, signed form and send it directly to Coach Todd.</p>
+        <a href="mailto:ttodd337@hotmail.com?subject=Youth%20Football%20Academy%20Registration&body=Hi%20Coach%20Todd%2C%0A%0AAttached%20is%20my%20completed%20registration%20form%20and%20waiver%20for%20the%20Youth%20Football%20Academy%20on%20August%2017%2C%202026.%0A%0APlayer%20Name%3A%0AParent%20Name%3A%0A%0A%28Please%20make%20sure%20your%20completed%20form%20is%20attached%20before%20sending%21%29" class="btn-pill btn-pill-green">Email Completed Form to Todd</a>
+        <button type="button" class="copy-email-btn" data-copy="ttodd337@hotmail.com">Or copy Todd's email: ttodd337@hotmail.com</button>
+      </div>
+    </div>
+    <p class="register-note">Clicking "Email Completed Form to Todd" opens your phone or computer's email app with Todd's address and a note already filled in — just attach your signed form before hitting send. If nothing opens (common on Windows machines without a default mail app), use the "copy email" link above and send it from whatever email you normally use, like Gmail or Outlook.</p>
+  </div>
+</section>
+
 <!-- ============ CTA ============ -->
 <section>
   <div class="container">
     <div class="cta-banner fade-up">
       <h2>Register Your Athlete</h2>
-      <p>Give your young athlete a safe, structured place to grow.</p>
-      <a href="contact.html" class="btn btn-primary">Register Your Athlete</a>
+      <p>Saturday, August 17, 2026 — give your young athlete a safe, structured place to grow.</p>
+      <a href="#register" class="btn btn-primary">Register Your Athlete</a>
       <p class="limited-note">Spots are limited</p>
     </div>
   </div>
@@ -207,7 +252,7 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <a href="training.html">Personal Training</a>
-        <a href="camp.html">Football Camp</a>
+        <a href="camp.html">Youth Football Academy</a>
         <a href="about.html">About Coach Todd</a>
         <a href="testimonials.html">Reviews</a>
       </div>
@@ -222,6 +267,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js?v=2"></script>
 </body>
 </html>

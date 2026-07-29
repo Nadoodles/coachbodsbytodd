@@ -800,6 +800,7 @@ body.no-scroll {
 
 .gallery-track {
   display: flex;
+  align-items: flex-start;
   transition: transform 0.4s ease;
 }
 
@@ -812,6 +813,14 @@ body.no-scroll {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.gallery-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
 }
 
 .gallery-arrow {
