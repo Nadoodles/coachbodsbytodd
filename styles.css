@@ -889,7 +889,7 @@ body.no-scroll {
 .attribute-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 20px;
 }
 
 .attribute-pill {

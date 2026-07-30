@@ -148,7 +148,7 @@ function initCopyButtons() {
       var text = btn.getAttribute('data-copy');
 
       var showCopied = function () {
-        btn.textContent = 'Copied! Paste it into your email app.';
+        btn.textContent = btn.getAttribute('data-copy-label') || 'Copied! Paste it into your email app.';
         setTimeout(function () { btn.textContent = originalText; }, 2500);
       };
 
