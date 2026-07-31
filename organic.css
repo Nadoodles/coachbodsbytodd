@@ -509,6 +509,13 @@ body.organic .gallery-arrow:hover { background: var(--terracotta); }
 body.organic .gallery-dot { background: rgba(255, 255, 255, 0.5); }
 body.organic .gallery-dot.is-active { background: var(--terracotta); transform: scale(1.25); }
 
+body.organic .testimonial-slider.gallery-slider { background: var(--cream-card); }
+body.organic .testimonial-slider .gallery-dot { background: rgba(33, 29, 20, 0.25); }
+body.organic .testimonial-slider .testimonial-quote { color: var(--dark); }
+body.organic .testimonial-slider .testimonial-author { font-family: var(--font-display); font-weight: 700; color: var(--dark); }
+body.organic .testimonial-slider .testimonial-role { font-size: 13px; color: #7A735E; }
+body.organic .testimonial-slider .stars { color: var(--terracotta); margin-bottom: 14px; }
+
 /* ==========================================================================
    Video frame — organic radius
    ========================================================================== */

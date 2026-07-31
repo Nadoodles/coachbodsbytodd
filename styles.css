@@ -624,6 +624,42 @@ body.no-scroll {
 }
 
 /* ==========================================================================
+   Testimonial slider (arrow-navigable reviews — same JS/markup as .gallery-slider)
+   ========================================================================== */
+
+.testimonial-slider.gallery-slider {
+  background: var(--color-surface);
+}
+
+.testimonial-slider .gallery-track {
+  align-items: stretch;
+}
+
+.testimonial-slider .gallery-slide {
+  aspect-ratio: auto;
+  box-sizing: border-box;
+  padding: var(--space-5) var(--space-6) var(--space-6);
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-slider .testimonial-card {
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+}
+
+.testimonial-slider .gallery-dot {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 640px) {
+  .testimonial-slider .gallery-slide {
+    padding: var(--space-4) var(--space-3) var(--space-5);
+  }
+}
+
+/* ==========================================================================
    CTA Banner
    ========================================================================== */
 
