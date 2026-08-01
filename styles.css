@@ -904,6 +904,186 @@ body.no-scroll {
 }
 
 /* ==========================================================================
+   Gallery page — filters, grid, placeholders, lightbox
+   ========================================================================== */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.gallery-filter-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.gallery-filter-btn:hover { background: var(--color-surface-alt, #F1F5F9); }
+
+.gallery-filter-btn.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.gallery-grid {
+  columns: 4;
+  column-gap: var(--space-3);
+}
+
+@media (max-width: 1023px) {
+  .gallery-grid { columns: 3; }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid { columns: 2; }
+}
+
+.gallery-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+}
+
+.gallery-item.is-hidden { display: none; }
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.04);
+}
+
+.gallery-item-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.gallery-placeholder-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.ph-camp { background: linear-gradient(135deg, #C05F2E 0%, #8f4520 100%); }
+.ph-training { background: linear-gradient(135deg, #1A3A5C 0%, #0f2338 100%); }
+.ph-group { background: linear-gradient(135deg, #2C3320 0%, #171b10 100%); }
+.ph-online { background: linear-gradient(135deg, #6E7F53 0%, #454f33 100%); }
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  background: rgba(15, 13, 9, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition);
+}
+
+.lightbox-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  width: 100%;
+  max-width: 720px;
+}
+
+.lightbox-media {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-media img,
+.lightbox-media video {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-card);
+  display: block;
+}
+
+.lightbox-caption {
+  color: #fff;
+  text-align: center;
+  margin-top: var(--space-2);
+  font-size: 15px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.22); }
+
+.lightbox-overlay .gallery-arrow-prev { left: 24px; }
+.lightbox-overlay .gallery-arrow-next { right: 24px; }
+
+/* ==========================================================================
    Lists / checkmarks
    ========================================================================== */
 

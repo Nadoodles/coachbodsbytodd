@@ -517,6 +517,38 @@ body.organic .testimonial-slider .testimonial-role { font-size: 13px; color: #7A
 body.organic .testimonial-slider .stars { color: var(--terracotta); margin-bottom: 14px; }
 
 /* ==========================================================================
+   Gallery page — organic palette
+   ========================================================================== */
+
+body.organic .gallery-filter-btn {
+  background: var(--cream-card);
+  box-shadow: none;
+  color: var(--dark);
+}
+
+body.organic .gallery-filter-btn:hover { background: var(--sage); }
+
+body.organic .gallery-filter-btn.is-active {
+  background: var(--terracotta);
+  color: #fff;
+}
+
+body.organic .gallery-item,
+body.organic .gallery-grid .gallery-item {
+  border-radius: 22px;
+  box-shadow: none;
+}
+
+body.organic .ph-camp { background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%); }
+body.organic .ph-training { background: linear-gradient(135deg, #3A4A66 0%, var(--dark) 100%); }
+body.organic .ph-group { background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); }
+body.organic .ph-online { background: linear-gradient(135deg, #7C8C5C 0%, var(--green-dark) 100%); }
+
+body.organic .lightbox-close:hover { background: var(--terracotta); }
+body.organic .lightbox-overlay .gallery-arrow { background: rgba(255, 255, 255, 0.12); }
+body.organic .lightbox-overlay .gallery-arrow:hover { background: var(--terracotta); }
+
+/* ==========================================================================
    Video frame — organic radius
    ========================================================================== */
 
