@@ -49,17 +49,19 @@ body.organic .navbar.is-scrolled {
 }
 
 body.organic .nav-logo {
-  font-family: var(--font-display);
-  font-weight: 900;
-  color: #fff;
-  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  background: var(--cream);
+  border-radius: 999px;
+  padding: 6px 16px;
+  box-shadow: 0 1px 4px rgba(33, 29, 20, 0.12);
 }
 
-body.organic .navbar.is-scrolled .nav-logo {
-  color: var(--dark);
+body.organic .nav-logo img {
+  display: block;
+  height: 30px;
+  width: auto;
 }
-
-body.organic .nav-logo span { color: var(--terracotta); }
 
 body.organic .nav-link {
   color: rgba(255, 255, 255, 0.92);
