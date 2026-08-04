@@ -251,6 +251,64 @@ body.organic .organic-split .split-photo img {
   display: block;
 }
 
+/* ---- Two-photo pairing (e.g. then & now) ---- */
+body.organic .photo-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+body.organic .photo-duo-item {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+body.organic .photo-duo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Pull quotes (Coach Todd's sayings) ---- */
+body.organic .pull-quote {
+  background: var(--cream-card);
+  border-radius: 24px;
+  padding: 36px 28px 32px;
+  text-align: center;
+}
+
+body.organic .pull-quote-mark {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--terracotta);
+  margin-bottom: 4px;
+}
+
+body.organic .pull-quote p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+/* ---- Press clipping ---- */
+body.organic .press-clip {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(33, 29, 20, 0.18);
+}
+
+body.organic .press-clip img {
+  width: 100%;
+  display: block;
+}
+
 body.organic .section-eyebrow-organic {
   display: inline-block;
   font-weight: 700;
