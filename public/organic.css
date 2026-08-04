@@ -281,6 +281,23 @@ body.organic .photo-duo-item.contain img {
   box-sizing: border-box;
 }
 
+/* ---- Embedded Google Form (registration) ---- */
+body.organic .form-embed {
+  width: 100%;
+  align-self: stretch;
+  margin-top: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(33, 29, 20, 0.14);
+  background: #fff;
+}
+
+body.organic .form-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
 /* ---- Pull quotes (Coach Todd's sayings) ---- */
 body.organic .pull-quote {
   background: var(--cream-card);
@@ -1094,8 +1111,16 @@ body.organic .register-note {
   text-align: center;
   max-width: 700px;
   margin: 32px auto 0;
-  font-size: 14px;
-  color: #56503F;
+  padding: 18px 24px;
+  border: 2px solid var(--terracotta);
+  border-radius: 16px;
+  background: rgba(192, 95, 46, 0.08);
+  font-size: 15px;
+  color: var(--dark);
+}
+
+body.organic .register-note strong {
+  color: var(--terracotta);
 }
 
 body.organic .copy-email-btn {
