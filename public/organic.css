@@ -271,6 +271,16 @@ body.organic .photo-duo-item img {
   display: block;
 }
 
+body.organic .photo-duo-item.contain {
+  background: var(--cream-card);
+}
+
+body.organic .photo-duo-item.contain img {
+  object-fit: contain;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 /* ---- Pull quotes (Coach Todd's sayings) ---- */
 body.organic .pull-quote {
   background: var(--cream-card);
