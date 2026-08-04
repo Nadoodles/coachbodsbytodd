@@ -25,10 +25,23 @@ body.organic h3 {
   font-family: var(--font-display);
   font-weight: 900;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 body.organic p {
   color: #56503F;
+  text-wrap: pretty;
+}
+
+body.organic li,
+body.organic .hero-subtitle,
+body.organic .section-eyebrow-organic,
+body.organic .section-eyebrow {
+  text-wrap: balance;
+}
+
+body.organic .testimonial-quote {
+  text-wrap: pretty;
 }
 
 /* ---- Nav: transparent over hero, solid once scrolled ---- */
@@ -142,7 +155,10 @@ body.organic .hero {
   align-items: flex-end;
   overflow: hidden;
   background: var(--dark);
-  padding: 0;
+  /* padding-top is a hard floor so the headline can never reach the fixed
+     nav, even if the text wraps to extra lines and grows the box taller
+     than 100vh */
+  padding: 260px 0 110px;
 }
 
 body.organic .hero-bg {
@@ -157,20 +173,28 @@ body.organic .hero-bg {
 body.organic .hero-fade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(20, 18, 12, 0.94) 0%,
-    rgba(20, 18, 12, 0.68) 30%,
-    rgba(20, 18, 12, 0.18) 62%,
-    rgba(20, 18, 12, 0.05) 100%
-  );
+  background:
+    linear-gradient(
+      to right,
+      rgba(20, 18, 12, 0.9) 0%,
+      rgba(20, 18, 12, 0.78) 35%,
+      rgba(20, 18, 12, 0.45) 58%,
+      rgba(20, 18, 12, 0.05) 82%
+    ),
+    linear-gradient(
+      to top,
+      rgba(20, 18, 12, 0.94) 0%,
+      rgba(20, 18, 12, 0.68) 30%,
+      rgba(20, 18, 12, 0.18) 62%,
+      rgba(20, 18, 12, 0.05) 100%
+    );
   z-index: 1;
 }
 
 body.organic .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 32px 130px;
+  padding: 0 32px;
   max-width: 780px;
   color: #fff;
 }
@@ -186,10 +210,10 @@ body.organic .hero-eyebrow {
 }
 
 body.organic .hero-content h1 {
-  font-size: clamp(38px, 6vw, 76px);
+  font-size: clamp(34px, 5.2vw, 62px);
   color: #fff;
   margin-bottom: 22px;
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 body.organic .hero-content p.hero-subtitle {
