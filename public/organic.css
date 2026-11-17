@@ -194,9 +194,19 @@ body.organic .hero-fade {
 body.organic .hero-content {
   position: relative;
   z-index: 2;
+  /* Pin to the container width instead of relying on flex-shrink: some
+     mobile browsers size a flex item to its max-content (the headline on
+     one line) and the hero's overflow:hidden then clips it. */
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
   padding: 0 32px;
   max-width: 780px;
   color: #fff;
+}
+
+@media (max-width: 480px) {
+  body.organic .hero-content { padding: 0 24px; }
 }
 
 body.organic .hero-eyebrow {
@@ -214,6 +224,8 @@ body.organic .hero-content h1 {
   color: #fff;
   margin-bottom: 22px;
   line-height: 1.1;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 body.organic .hero-content p.hero-subtitle {
